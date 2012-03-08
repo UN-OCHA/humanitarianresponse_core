@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ */
+
+
+function humanitarianresponse_core_sharethis_configuration($option, $value, $replace = TRUE) {
+  $record = (object) NULL;
+  $record->st_option = $option;
+  if ($replace == TRUE) {
+    $record->st_value = $value;
+  }
+  else {
+    $results = db_select('st_table', 's')
+      ->fields('s')
+      ->condition('st_option', $option, '=')
+      ->execute();
+    if ($result = $results->fetchAssoc()) {
+      $db_value = $result['st_value'];
+      if ($db_value != '') {
+        $db_value .= ',';
+      }
+      $record->st_value = $db_value.$value;
+    }
+    else {
+      $record->st_value = $value;
+    }
+  }
+  return drupal_write_record('st_table', $record, 'st_option');
+}
+

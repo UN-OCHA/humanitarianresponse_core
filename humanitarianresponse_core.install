@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file Installs Grupal core
+ */
+
+/**
+ * Implements hook_install()
+ */
+function humanitarianresponse_core_install() {
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 99;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+    
+  // Create a role manager
+  $manager_role = new stdClass();
+  $manager_role->name = 'manager';
+  $manager_role->weight = 90;
+  user_role_save($manager_role);
+  
+  // Create a role editor specific for content edition
+  $editor_role = new stdClass();
+  $editor_role->name = 'editor';
+  $editor_role->weight = 80;
+  user_role_save($editor_role);
+  
+  // Comment permissions
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'edit own comments'));
+  
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+}
+
