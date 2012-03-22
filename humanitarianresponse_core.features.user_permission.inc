@@ -21,6 +21,16 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: access all views
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'views',
+  );
+
   // Exported permission: access content
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -47,7 +57,8 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
+      1 => 'editor',
+      2 => 'manager',
     ),
     'module' => 'dashboard',
   );
@@ -57,10 +68,19 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'access overlay',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      1 => 'manager',
     ),
     'module' => 'overlay',
+  );
+
+  // Exported permission: access site reports
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: access toolbar
@@ -106,6 +126,16 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'comment',
   );
 
+  // Exported permission: administer image styles
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'image',
+  );
+
   // Exported permission: administer media
   $permissions['administer media'] = array(
     'name' => 'administer media',
@@ -137,6 +167,16 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: administer site configuration
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: administer taxonomy
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
@@ -166,6 +206,16 @@ function humanitarianresponse_core_user_default_permissions() {
       1 => 'manager',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: administer views
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'views',
   );
 
   // Exported permission: bypass node access
