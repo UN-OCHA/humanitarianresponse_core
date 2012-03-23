@@ -3,6 +3,7 @@
  * @file
  */
 
+include_once('humanitarianresponse_core.features.inc');
 
 function humanitarianresponse_core_sharethis_configuration($option, $value, $replace = TRUE) {
   $record = (object) NULL;
