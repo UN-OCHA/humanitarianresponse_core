@@ -161,8 +161,7 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      1 => 'manager',
     ),
     'module' => 'node',
   );
