@@ -2,7 +2,6 @@ name = "Humanitarianresponse Core"
 description = "Required by all other Humanitarianresponse features"
 core = "7.x"
 package = "Humanitarianresponse"
-project status url = http://features.humanitarianresponse.info/fserver
 php = "5.2.4"
 dependencies[] = "better_formats"
 dependencies[] = "block"
