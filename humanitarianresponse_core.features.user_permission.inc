@@ -63,16 +63,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'dashboard',
   );
 
-  // Exported permission: access overlay
-  $permissions['access overlay'] = array(
-    'name' => 'access overlay',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
-    ),
-    'module' => 'overlay',
-  );
-
   // Exported permission: access site reports
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
