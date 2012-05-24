@@ -37,16 +37,5 @@ function humanitarianresponse_core_install() {
   // Comment permissions
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'edit own comments'));
-  
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
-  menu_link_save($item);
-
-  // Update the menu router information.
-  menu_rebuild();
 }
 
