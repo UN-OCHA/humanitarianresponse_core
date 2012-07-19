@@ -49,6 +49,14 @@ function humanitarianresponse_core_filter_default_formats() {
         'status' => '1',
         'settings' => array(),
       ),
+      'pathologic' => array(
+        'weight' => '15',
+        'status' => '1',
+        'settings' => array(
+          'local_paths' => '',
+          'absolute' => 1,
+        ),
+      ),
     ),
   );
 
@@ -81,6 +89,14 @@ function humanitarianresponse_core_filter_default_formats() {
         'weight' => '10',
         'status' => '1',
         'settings' => array(),
+      ),
+      'pathologic' => array(
+        'weight' => '15',
+        'status' => '1',
+        'settings' => array(
+          'local_paths' => '',
+          'absolute' => 1,
+        ),
       ),
     ),
   );
