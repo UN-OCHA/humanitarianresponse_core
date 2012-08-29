@@ -126,14 +126,14 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: administer media
-  $permissions['administer media'] = array(
-    'name' => 'administer media',
+  // Exported permission: administer files
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
     'roles' => array(
       0 => 'administrator',
       1 => 'manager',
     ),
-    'module' => 'media',
+    'module' => 'file_entity',
   );
 
   // Exported permission: administer menu
@@ -239,15 +239,15 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit media
-  $permissions['edit media'] = array(
-    'name' => 'edit media',
+  // Exported permission: edit file
+  $permissions['edit file'] = array(
+    'name' => 'edit file',
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
       2 => 'manager',
     ),
-    'module' => 'media',
+    'module' => 'file_entity',
   );
 
   // Exported permission: import media
