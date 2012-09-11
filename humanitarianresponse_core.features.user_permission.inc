@@ -281,6 +281,17 @@ function humanitarianresponse_core_user_default_permissions() {
     ),
     'module' => 'better_formats',
   );
+  
+  // Exported permission: show format selection for taxonomy_term
+  $permissions['show format selection for taxonomy_term'] = array(
+    'name' => 'show format selection for taxonomy_term',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+      2 => 'manager',
+    ),
+    'module' => 'better_formats',
+  );
 
   // Exported permission: show format selection for user
   $permissions['show format selection for user'] = array(
