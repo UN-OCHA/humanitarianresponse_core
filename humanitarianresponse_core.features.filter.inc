@@ -10,7 +10,7 @@
 function humanitarianresponse_core_filter_default_formats() {
   $formats = array();
 
-  // Exported format: Filtered HTML
+  // Exported format: Filtered HTML.
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
     'name' => 'Filtered HTML',
@@ -61,7 +61,7 @@ function humanitarianresponse_core_filter_default_formats() {
     ),
   );
 
-  // Exported format: Full HTML
+  // Exported format: Full HTML.
   $formats['full_html'] = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
@@ -103,7 +103,7 @@ function humanitarianresponse_core_filter_default_formats() {
     ),
   );
 
-  // Exported format: Simple
+  // Exported format: Simple.
   $formats['simple'] = array(
     'format' => 'simple',
     'name' => 'Simple',
