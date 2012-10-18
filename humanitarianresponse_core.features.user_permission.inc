@@ -21,16 +21,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access all views.
-  $permissions['access all views'] = array(
-    'name' => 'access all views',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
-    ),
-    'module' => 'views',
-  );
-
   // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -194,16 +184,6 @@ function humanitarianresponse_core_user_default_permissions() {
       1 => 'manager',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: administer views.
-  $permissions['administer views'] = array(
-    'name' => 'administer views',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
-    ),
-    'module' => 'views',
   );
 
   // Exported permission: bypass node access.
