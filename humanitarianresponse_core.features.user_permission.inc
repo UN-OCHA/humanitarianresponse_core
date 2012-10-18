@@ -120,7 +120,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -130,7 +129,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer image styles',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
     ),
     'module' => 'image',
   );
@@ -180,7 +178,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer themes',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
     ),
     'module' => 'system',
   );
