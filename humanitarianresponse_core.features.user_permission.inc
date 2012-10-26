@@ -158,7 +158,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
     ),
     'module' => 'system',
   );
