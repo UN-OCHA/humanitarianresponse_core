@@ -21,18 +21,6 @@ function humanitarianresponse_core_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-    
-  // Create a role manager
-  $manager_role = new stdClass();
-  $manager_role->name = 'manager';
-  $manager_role->weight = 90;
-  user_role_save($manager_role);
-  
-  // Create a role editor specific for content edition
-  $editor_role = new stdClass();
-  $editor_role->name = 'editor';
-  $editor_role->weight = 80;
-  user_role_save($editor_role);
   
   // Comment permissions
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
