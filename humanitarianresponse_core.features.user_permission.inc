@@ -68,6 +68,7 @@ function humanitarianresponse_core_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'manager',
+      2 => 'editor'
     ),
     'module' => 'system',
   );
