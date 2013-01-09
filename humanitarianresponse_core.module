@@ -5,3 +5,20 @@
 
 include_once('humanitarianresponse_core.features.inc');
 
+function humanitarianresponse_core_feeds_check($id, $url) {
+  $source = feeds_source($id);
+  $url = $source->config['FeedsHTTPFetcher']['source'];
+  if ($url == "") {
+    $source->addConfig(array('FeedsHTTPFetcher' => array('source' => $url)));
+    $source->save();
+
+    // Refresh feed if import on create is selected.
+    if ($source->importer->config['import_on_create']) {
+      $source->startImport();
+    }
+
+    // Add to schedule, make sure importer is scheduled, too.
+    $source->schedule();
+    $source->importer->schedule();
+  }
+}
