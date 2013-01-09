@@ -7,8 +7,8 @@ include_once('humanitarianresponse_core.features.inc');
 
 function humanitarianresponse_core_feeds_check($id, $url) {
   $source = feeds_source($id);
-  $url = $source->config['FeedsHTTPFetcher']['source'];
-  if ($url == "") {
+  $tmp_url = $source->config['FeedsHTTPFetcher']['source'];
+  if ($tmp_url == "") {
     $source->addConfig(array('FeedsHTTPFetcher' => array('source' => $url)));
     $source->save();
 
