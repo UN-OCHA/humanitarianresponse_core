@@ -6,6 +6,7 @@
 include_once('humanitarianresponse_core.features.inc');
 
 function humanitarianresponse_core_feeds_check($id, $url) {
+  drupal_set_time_limit(0);
   $source = feeds_source($id);
   $tmp_url = $source->config['FeedsHTTPFetcher']['source'];
   if ($tmp_url == "") {
