@@ -7,6 +7,8 @@ include_once('humanitarianresponse_core.features.inc');
 
 function humanitarianresponse_core_feeds_check($id, $url) {
   drupal_set_time_limit(0);
+  // Using a direct call to the constructor to avoid getting the feeds source into the static variable
+  // of FeedsSource::instance
   $source = new FeedsSource($id);
   $tmp_url = $source->config['FeedsHTTPFetcher']['source'];
   if ($tmp_url == "") {
