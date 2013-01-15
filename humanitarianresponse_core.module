@@ -23,3 +23,35 @@ function humanitarianresponse_core_feeds_check($id, $url) {
     $source->importer->schedule();
   }
 }
+
+/**
+ * Rebuilds taxonomy menu without Batch API. This is needed to avoid
+ * issues when taxonomy menu is rebuilt from cron
+ */
+function humanitarianresponse_core_taxonomy_menu_rebuild($vid) {
+  // Remove all of the menu items for this vocabulary
+  _taxonomy_menu_delete_all($vid);
+
+  // Only insert the links if a menu is set
+  if (variable_get(_taxonomy_menu_build_variable('vocab_menu', $vid), FALSE)) {
+    $menu_name = variable_get(_taxonomy_menu_build_variable('vocab_menu', $vid), FALSE);
+    // Check to see if we should had a vocab item
+    if (variable_get(_taxonomy_menu_build_variable('voc_item', $vid), FALSE)) {
+      $args = array(
+        'vid' => $vid,
+        'menu_name' => $menu_name,
+      );
+      taxonomy_menu_handler('insert', $args);
+    }
+    $terms = taxonomy_get_tree($vid);
+    // Loop through $terms to process each term.
+    for ($i=0; $i<count($terms); $i++) {
+      $args = array(
+        'term' => $terms[$i],
+        'menu_name' => $menu_name,
+      );
+      $mlid = taxonomy_menu_handler('insert', $args);
+    }
+    menu_rebuild();
+  }
+}
