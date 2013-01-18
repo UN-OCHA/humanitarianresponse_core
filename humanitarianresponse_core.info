@@ -75,6 +75,7 @@ features[user_permission][] = view revisions
 features[user_permission][] = view the administration theme
 features[user_role][] = editor
 features[user_role][] = manager
+features[variable][] = entity_translation_entity_types
 features[variable][] = pathauto_node_pattern
 features[wysiwyg][] = filtered_html
 features[wysiwyg][] = full_html
