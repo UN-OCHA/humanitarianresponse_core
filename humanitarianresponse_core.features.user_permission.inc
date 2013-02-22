@@ -319,6 +319,27 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'better_formats',
   );
 
+  // Exported permission: translate any entity.
+  $permissions['translate any entity'] = array(
+    'name' => 'translate any entity',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: translate node entities.
+  $permissions['translate node entities'] = array(
+    'name' => 'translate node entities',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'entity_translation',
+  );
+
   // Exported permission: use text format filtered_html.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
