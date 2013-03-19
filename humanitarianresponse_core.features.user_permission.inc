@@ -233,8 +233,8 @@ function humanitarianresponse_core_user_default_permissions() {
   );
 
   // Exported permission: edit file.
-  $permissions['edit file'] = array(
-    'name' => 'edit file',
+  $permissions['edit any files'] = array(
+    'name' => 'edit any files',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
