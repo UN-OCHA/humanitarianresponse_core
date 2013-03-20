@@ -232,6 +232,17 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: create files.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: edit file.
   $permissions['edit any files'] = array(
     'name' => 'edit any files',
