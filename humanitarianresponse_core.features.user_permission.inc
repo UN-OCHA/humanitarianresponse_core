@@ -210,6 +210,17 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: create files.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: create url aliases.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -232,18 +243,7 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create files.
-  $permissions['create files'] = array(
-    'name' => 'create files',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: edit file.
+  // Exported permission: edit any files.
   $permissions['edit any files'] = array(
     'name' => 'edit any files',
     'roles' => array(

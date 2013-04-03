@@ -13,14 +13,14 @@ function humanitarianresponse_core_user_default_roles() {
   // Exported role: editor.
   $roles['editor'] = array(
     'name' => 'editor',
-    'weight' => '80',
+    'weight' => 80,
     'machine_name' => 'editor',
   );
 
   // Exported role: manager.
   $roles['manager'] = array(
     'name' => 'manager',
-    'weight' => '90',
+    'weight' => 90,
     'machine_name' => 'manager',
   );
 
