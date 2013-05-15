@@ -58,6 +58,15 @@ function humanitarianresponse_core_filter_default_formats() {
           'absolute' => 1,
         ),
       ),
+      'invisimail_encode_js_entities' => array(
+        'weight' => 20,
+        'status' => 1,
+        'settings' => array(
+          'encoder' => 'js_entities',
+          'chunk' => 0,
+          'link' => 0,
+        ),
+      ),
     ),
   );
 
@@ -104,6 +113,15 @@ function humanitarianresponse_core_filter_default_formats() {
           'protocol_style' => 'full',
         ),
       ),
+      'invisimail_encode_js_entities' => array(
+        'weight' => 20,
+        'status' => 1,
+        'settings' => array(
+          'encoder' => 'js_entities',
+          'chunk' => 0,
+          'link' => 0,
+        ),
+      ),
     ),
   );
 
@@ -140,6 +158,15 @@ function humanitarianresponse_core_filter_default_formats() {
         'weight' => 10,
         'status' => 1,
         'settings' => array(),
+      ),
+      'invisimail_encode_js_entities' => array(
+        'weight' => 15,
+        'status' => 1,
+        'settings' => array(
+          'encoder' => 'js_entities',
+          'chunk' => 0,
+          'link' => 0,
+        ),
       ),
     ),
   );
