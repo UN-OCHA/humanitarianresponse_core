@@ -88,9 +88,8 @@ function humanitarianresponse_core_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'manager' => 'manager',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'user',
   );
