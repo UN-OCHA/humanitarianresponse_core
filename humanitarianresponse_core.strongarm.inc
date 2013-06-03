@@ -72,5 +72,12 @@ function humanitarianresponse_core_strongarm() {
   $strongarm->value = 'security';
   $export['update_notification_threshold'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'visualization';
+  $strongarm->value = 'highcharts';
+  $export['visualization'] = $strongarm;
+
   return $export;
 }
