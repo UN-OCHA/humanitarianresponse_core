@@ -242,12 +242,11 @@ function humanitarianresponse_core_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any files.
-  $permissions['edit any files'] = array(
-    'name' => 'edit any files',
+  // Exported permission: administer files.
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
