@@ -55,7 +55,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'dashboard',
   );
@@ -97,7 +96,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'block',
   );
@@ -107,7 +105,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'comment',
   );
@@ -222,7 +219,6 @@ function humanitarianresponse_core_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'path',
   );
