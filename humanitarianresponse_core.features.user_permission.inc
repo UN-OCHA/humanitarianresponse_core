@@ -38,19 +38,6 @@ function humanitarianresponse_core_user_default_permissions() {
     ),
     'module' => 'node',
   );
-  
-  // Exported permission: 'view own unpublished content'.
-  $permissions['view own unpublished content'] = array(
-    'name' => 'view own unpublished content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-      'moderator' => 'moderator',
-      'editor' => 'editor',
-      'contributor' => 'contributor',
-    ),
-    'module' => 'node',
-  );
 
   // Exported permission: 'access content overview'.
   $permissions['access content overview'] = array(
@@ -386,6 +373,19 @@ function humanitarianresponse_core_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'contributor' => 'contributor',
+      'editor' => 'editor',
+      'manager' => 'manager',
+      'moderator' => 'moderator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'view revisions'.
